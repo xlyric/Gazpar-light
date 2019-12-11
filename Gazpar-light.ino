@@ -1,5 +1,6 @@
 //***********************************
 //************* Module Gazpar vers Domoticz 
+//*************  Cyril Poissonnier 2019 
 //***********************************
 
 
@@ -71,13 +72,10 @@ void ICACHE_RAM_ATTR  IntChange() {
 void setup() {
 
 // init port
-  // pinMode(Gazpar, INPUT);
   
   Serial.begin(115200);
   Serial.println();
 
-  //attachInterrupt(Gazpar, IntChange, FALLING);
-  
   pinMode(interruptPin, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(Gazpar), IntChange, FALLING);
   
@@ -135,22 +133,7 @@ void setup() {
 //***********************************
 
 void loop() {
-// Calcul temps de fonctionnement
-   /* if (millis() > MemMillis) 
-   {
-      Jour = (millis()/86400000) + (49 * NombreBoucleMillis);
-      Heure = (millis()-(Jour*86400000))/3600000;
-      Minute = (millis()-(Jour*86400000)-(Heure*3600000))/60000;
-   }
-   else
-   {
-      NombreBoucleMillis = NombreBoucleMillis + 1;
-   } */
-   
-    // MemMillis = millis();
-  
-   /*SigneDeVie++;
-   mb.Hreg(100, SigneDeVie); */
+
 
 // Reset memoire impulsion au bout de 1 seconde
   if ((Impulsion == true) and (millis() > (TimeImpulsion + 400)))
@@ -171,19 +154,6 @@ void loop() {
 delay(250);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //***********************************
