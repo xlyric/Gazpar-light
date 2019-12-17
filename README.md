@@ -2,10 +2,13 @@
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
+In French because "Gazpar" is only in France.
+
 Gazpar-Light à pour but de récupéré les informations sur le compteur communicant Gazpar. 
 La version Light est minimaliste au possible, elle ne fait que remonter les informations vers Domoticz ( OK ) ou Jeedom ( non testé )
+La version full est avec un serveur Web intégré et utilise le SPDIFF, et remonte les informations vers Domoticz ( OK ) ou Jeedom ( non testé )
 
-Gazpar-Light fonctionne avec les différents ESP8266 classiques ( Wemos et Lolin testé )
+# Gazpar-Light fonctionne avec les différents ESP8266 classiques ( Wemos et Lolin testé )
 
 il utilise les librairies suivante :
   - esp8266 
@@ -13,6 +16,16 @@ il utilise les librairies suivante :
   - ESPAsyncWiFiManager
   - ESP8266HTTPClient
   - ArduinoOTA et WiFiUdp pour l'OTA sous Wemos ( mise à jour par Wifi )
+
+
+# Gazpar-full 
+utilise en plus  
+  - ESPAsyncWebServer
+  - ESPAsyncTCP
+  - fs
+
+et se présente sous l'aspect suivant :
+![alt text](affichage.png)
 
 # Montage électronique :
 
