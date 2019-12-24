@@ -262,7 +262,7 @@ if ( ( epoch - hour_epoch ) >= 3600000 ) {
 	}
 
 
-
+ArduinoOTA.handle();
 delay(250);
 
 }
