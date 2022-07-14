@@ -6,6 +6,8 @@ In French because "Gazpar" is only in France.
 
 Gazpar-Light à pour but de récupéré les informations sur le compteur communicant Gazpar. 
 La version Light est minimaliste au possible, elle ne fait que remonter les informations vers Domoticz ( OK ) ou Jeedom ( non testé )
+et fonctionne en mode DeepSleep et donc ne fonctionne que lors d'une impulsion du gazpar. 
+
 La version full est avec un serveur Web intégré et utilise le SPDIFF, et remonte les informations vers Domoticz ( OK ) ou Jeedom ( non testé )
 
 # Gazpar-Light fonctionne avec les différents ESP8266 classiques ( Wemos et Lolin testé )
