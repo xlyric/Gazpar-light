@@ -98,6 +98,9 @@ void setup() {
   Serial.println(WiFi.localIP()); 
   Serial.println(ESP.getResetReason());
 
+  client.connect("Gazpar");
+  client.setServer(domotic_server, port);
+  
 }
 
 
